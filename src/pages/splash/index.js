@@ -1,19 +1,22 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { Text, View } from "react-native";
+import { StatusBar, Text, View } from "react-native";
+import colors from '../../config/styles/colors';
 
-const Splash = ({navigation}) => {
+const Splash = ({ navigation }) => {
     useEffect(() => {
         setTimeout(() => {
             navigation.replace('SignIn');
-        }, 2000);
+        }, 4000);
     });
     return (
         <View>
+            <StatusBar
+                backgroundColor={colors.colorPrimary}
+            />
             <Text>Splash Screen</Text>
         </View>
     );
 };
 
 export default Splash;
-
